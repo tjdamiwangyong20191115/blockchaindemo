@@ -33,14 +33,28 @@ namespace tjdamiblockchainclientdemo
             if (tabControl1.SelectedTab.Text.Equals("Text"))
             {
                 //上传文字信息
-                strpost = txtContent.Text;
+                strpost = "{\"account\": \"" + txtAccount.Text + "\",\"evidencedata\": " + txtContent.Text  + ",\"sign\": \"" + txtPrivatekeyMD5.Text + "\"}";
                 strRet = HttpUtil.HttpPost(txtIP.Text + "/blockchain-generic/TraceabilityController/saveData", strpost, "");
             }
-            else
+            else if (tabControl1.SelectedTab.Text.Equals("Binary"))
             {
                 //上传文件信息
                 strpost = "{\"account\": \"" + txtAccount.Text + "\",\"evidencedata\": {\"fileurl\":\"" + lblFilepathinserver.Text + "\"},\"sign\": \"" + txtPrivatekeyMD5.Text + "\"}";
                 strRet = HttpUtil.HttpPost(txtIP.Text + "/blockchain-generic/TraceabilityController/savefile", strpost, "");
+            }
+            else if (tabControl1.SelectedTab.Text.Equals("Source"))
+            {
+                //上传文字朔源信息
+                if (string.IsNullOrEmpty(txtSourceCID.Text))
+                {
+                    strpost = "{\"account\": \"" + txtAccount.Text + "\",\"evidencedata\": " + txtSource.Text + ",\"sign\": \"" + txtPrivatekeyMD5.Text + "\"}";
+                }
+                else
+                {
+                    strpost = "{\"account\": \"" + txtAccount.Text + "\",\"evidencedata\": " + txtSource.Text + ",\"sign\": \"" + txtPrivatekeyMD5.Text + "\",\"idhash\": \"" + txtSourceCID.Text + "\"}";
+                }
+                                
+                strRet = HttpUtil.HttpPost(txtIP.Text + "/blockchain-generic/sourceController/saveData", strpost, "");
             }
 
             txtResult.Text = strRet.Replace("\\\"", "\"");
@@ -59,8 +73,17 @@ namespace tjdamiblockchainclientdemo
                 return;
             }
             string strpost = "{\"account\": \"" + txtAccount.Text + "\",\"idhash\": \"" + txtCid.Text + "\"}";
-            string strRet = HttpUtil.HttpPost(txtIP.Text + "/blockchain-generic/TraceabilityController/findData", strpost, "");
-            txtResult.Text = strRet.Replace("\\\"", "\"");
+            string strRet = "";
+            if (tabControl1.SelectedTab.Text.Equals("Text") || tabControl1.SelectedTab.Text.Equals("Binary"))
+            {
+                strRet = HttpUtil.HttpPost(txtIP.Text + "/blockchain-generic/TraceabilityController/findData", strpost, "");
+            }
+            else if (tabControl1.SelectedTab.Text.Equals("Source"))
+            {
+                strRet = HttpUtil.HttpPost(txtIP.Text + "/blockchain-generic/sourceController/findData", strpost, "");
+            }
+
+            txtResult.Text = HttpUtil.ConvertJsonString(strRet.Replace("\\\"", "\""));
         }
 
         private void btnMD5_Click(object sender, EventArgs e)

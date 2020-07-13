@@ -52,9 +52,14 @@
             this.btnMD5 = new System.Windows.Forms.Button();
             this.txtPrivatekeyMD5 = new System.Windows.Forms.TextBox();
             this.btnShow = new System.Windows.Forms.Button();
+            this.tabSource = new System.Windows.Forms.TabPage();
+            this.txtSource = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSourceCID = new System.Windows.Forms.TextBox();
             this.tabBin.SuspendLayout();
             this.tabText.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabSource.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtAccount
@@ -70,6 +75,7 @@
             this.txtResult.Location = new System.Drawing.Point(37, 380);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
+            this.txtResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtResult.Size = new System.Drawing.Size(750, 194);
             this.txtResult.TabIndex = 23;
             // 
@@ -143,7 +149,7 @@
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(743, 136);
             this.txtContent.TabIndex = 0;
-            this.txtContent.Text = "{\r\n\"account\": \"\",\r\n\"evidencedata\": {\"fileurl\":\"\"},\r\n\"sign\": \"\"\r\n}";
+            this.txtContent.Text = "{\r\n\"key\":\"sadfsdfdf\"\r\n}";
             // 
             // tabText
             // 
@@ -169,6 +175,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabText);
             this.tabControl1.Controls.Add(this.tabBin);
+            this.tabControl1.Controls.Add(this.tabSource);
             this.tabControl1.Location = new System.Drawing.Point(37, 96);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -274,6 +281,42 @@
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
+            // tabSource
+            // 
+            this.tabSource.Controls.Add(this.txtSourceCID);
+            this.tabSource.Controls.Add(this.label7);
+            this.tabSource.Controls.Add(this.txtSource);
+            this.tabSource.Location = new System.Drawing.Point(4, 22);
+            this.tabSource.Name = "tabSource";
+            this.tabSource.Size = new System.Drawing.Size(749, 142);
+            this.tabSource.TabIndex = 2;
+            this.tabSource.Text = "Source";
+            this.tabSource.UseVisualStyleBackColor = true;
+            // 
+            // txtSource
+            // 
+            this.txtSource.Location = new System.Drawing.Point(3, 32);
+            this.txtSource.Multiline = true;
+            this.txtSource.Name = "txtSource";
+            this.txtSource.Size = new System.Drawing.Size(746, 107);
+            this.txtSource.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 12);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Source CID";
+            // 
+            // txtSourceCID
+            // 
+            this.txtSourceCID.Location = new System.Drawing.Point(76, 8);
+            this.txtSourceCID.Name = "txtSourceCID";
+            this.txtSourceCID.Size = new System.Drawing.Size(670, 21);
+            this.txtSourceCID.TabIndex = 2;
+            // 
             // FrmNewMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -305,6 +348,8 @@
             this.tabText.ResumeLayout(false);
             this.tabText.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabSource.ResumeLayout(false);
+            this.tabSource.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +380,9 @@
         private System.Windows.Forms.Button btnMD5;
         private System.Windows.Forms.TextBox txtPrivatekeyMD5;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.TabPage tabSource;
+        private System.Windows.Forms.TextBox txtSource;
+        private System.Windows.Forms.TextBox txtSourceCID;
+        private System.Windows.Forms.Label label7;
     }
 }
