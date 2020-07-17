@@ -41,6 +41,10 @@
             this.tabText = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabSource = new System.Windows.Forms.TabPage();
+            this.txtSourceCID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSource = new System.Windows.Forms.TextBox();
             this.txtCid = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnUpload = new System.Windows.Forms.Button();
@@ -52,10 +56,6 @@
             this.btnMD5 = new System.Windows.Forms.Button();
             this.txtPrivatekeyMD5 = new System.Windows.Forms.TextBox();
             this.btnShow = new System.Windows.Forms.Button();
-            this.tabSource = new System.Windows.Forms.TabPage();
-            this.txtSource = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSourceCID = new System.Windows.Forms.TextBox();
             this.tabBin.SuspendLayout();
             this.tabText.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -182,6 +182,42 @@
             this.tabControl1.Size = new System.Drawing.Size(757, 168);
             this.tabControl1.TabIndex = 22;
             // 
+            // tabSource
+            // 
+            this.tabSource.Controls.Add(this.txtSourceCID);
+            this.tabSource.Controls.Add(this.label7);
+            this.tabSource.Controls.Add(this.txtSource);
+            this.tabSource.Location = new System.Drawing.Point(4, 22);
+            this.tabSource.Name = "tabSource";
+            this.tabSource.Size = new System.Drawing.Size(749, 142);
+            this.tabSource.TabIndex = 2;
+            this.tabSource.Text = "Source";
+            this.tabSource.UseVisualStyleBackColor = true;
+            // 
+            // txtSourceCID
+            // 
+            this.txtSourceCID.Location = new System.Drawing.Point(76, 8);
+            this.txtSourceCID.Name = "txtSourceCID";
+            this.txtSourceCID.Size = new System.Drawing.Size(670, 21);
+            this.txtSourceCID.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 12);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Source CID";
+            // 
+            // txtSource
+            // 
+            this.txtSource.Location = new System.Drawing.Point(3, 32);
+            this.txtSource.Multiline = true;
+            this.txtSource.Name = "txtSource";
+            this.txtSource.Size = new System.Drawing.Size(746, 107);
+            this.txtSource.TabIndex = 0;
+            // 
             // txtCid
             // 
             this.txtCid.Location = new System.Drawing.Point(87, 309);
@@ -225,7 +261,7 @@
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(662, 21);
             this.txtIP.TabIndex = 17;
-            this.txtIP.Text = "http://192.168.1.195:32223/apigateway";
+            this.txtIP.Text = "http://114.116.96.237:19630";
             // 
             // txtPrivatekey
             // 
@@ -233,7 +269,7 @@
             this.txtPrivatekey.Name = "txtPrivatekey";
             this.txtPrivatekey.Size = new System.Drawing.Size(240, 21);
             this.txtPrivatekey.TabIndex = 16;
-            this.txtPrivatekey.Text = "vpwoEVsPSvnr";
+            this.txtPrivatekey.Text = "EFiMmLjenIyM";
             // 
             // label2
             // 
@@ -269,7 +305,7 @@
             this.txtPrivatekeyMD5.Name = "txtPrivatekeyMD5";
             this.txtPrivatekeyMD5.Size = new System.Drawing.Size(342, 21);
             this.txtPrivatekeyMD5.TabIndex = 28;
-            this.txtPrivatekeyMD5.Text = "1a23d588c023423121f4dc1560983993";
+            this.txtPrivatekeyMD5.Text = "698cd18c60eff5618431bd1dea0bb0a2";
             // 
             // btnShow
             // 
@@ -280,42 +316,6 @@
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
-            // tabSource
-            // 
-            this.tabSource.Controls.Add(this.txtSourceCID);
-            this.tabSource.Controls.Add(this.label7);
-            this.tabSource.Controls.Add(this.txtSource);
-            this.tabSource.Location = new System.Drawing.Point(4, 22);
-            this.tabSource.Name = "tabSource";
-            this.tabSource.Size = new System.Drawing.Size(749, 142);
-            this.tabSource.TabIndex = 2;
-            this.tabSource.Text = "Source";
-            this.tabSource.UseVisualStyleBackColor = true;
-            // 
-            // txtSource
-            // 
-            this.txtSource.Location = new System.Drawing.Point(3, 32);
-            this.txtSource.Multiline = true;
-            this.txtSource.Name = "txtSource";
-            this.txtSource.Size = new System.Drawing.Size(746, 107);
-            this.txtSource.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 12);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Source CID";
-            // 
-            // txtSourceCID
-            // 
-            this.txtSourceCID.Location = new System.Drawing.Point(76, 8);
-            this.txtSourceCID.Name = "txtSourceCID";
-            this.txtSourceCID.Size = new System.Drawing.Size(670, 21);
-            this.txtSourceCID.TabIndex = 2;
             // 
             // FrmNewMain
             // 
