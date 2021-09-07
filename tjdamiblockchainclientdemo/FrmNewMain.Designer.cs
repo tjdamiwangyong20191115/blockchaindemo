@@ -342,7 +342,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmNewMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dami BlockChain Client Demo";
+            this.Text = "Yunchuan BlockChain Client Demo";
             this.tabBin.ResumeLayout(false);
             this.tabBin.PerformLayout();
             this.tabText.ResumeLayout(false);
