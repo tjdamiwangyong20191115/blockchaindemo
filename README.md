@@ -1,7 +1,7 @@
 # blockchaindemo
-It is a example that using the dami blockchain system.
+It is a example that using the yunchuan blockchain system.
 
-These are two methodes. one is uploading data to dami blockchain system, the other is searching data from dami bolckchain system.
+These are two methodes. one is uploading data to yunchuan blockchain system, the other is searching data from yunchuan bolckchain system.
 these data can be a text, a picture file or a video file.
 
 Files list
